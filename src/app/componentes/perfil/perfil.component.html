@@ -1,0 +1,41 @@
+<h1>Datos Personales</h1>
+
+<div>
+	<ul>
+		<h2>¿Informacion Personal?</h2>
+			<li><a>Nombre : {{ contenido.nombre }}</a></li>
+			<li><a>Edad : {{ contenido.edad }}</a></li>
+			<li>Pasatiempos :</li>
+			<ol>
+				<li>Escuchar Musica</li>
+				<li>Leer libros y manga</li>
+				<li>Ver Anime, series y peliculas</li>
+			</ol>
+
+		<h2>¿Como Comunicarce Conmigo?</h2>
+
+			<p>Puede encontrarme en las siguientes redes sociales</p>
+			<li><a>Email : {{ contenido.email }}</a></li>
+			<li>Facebook : 
+				<a href="https://www.facebook.com/berlad.gonzalez" title="{{ contenido.facebook }}" target="_blank">
+					{{ contenido.facebook }}
+				</a>
+			</li>	
+			<li>Instagran : 
+				<a href="https://www.instagram.com/berlad66/?hl=es-la" title="{{ contenido.instagram }}" target="_blank">
+					{{ contenido.instagram }}
+				</a>
+			</li>
+			<li>WhatsApp : 311-736-9170</li>
+	</ul>
+</div>
+
+<h2>Datos Profecionales</h2>
+
+<h3>Estudios</h3>
+
+<ul>
+	<li>Primaria : {{ contenido_2.primaria }}</li>
+	<li>Bachillerato : {{ contenido_2.bachillerato1 }}</li>
+	<li>Bachillerato : {{ contenido_2.bachillerato1 }}</li>
+</ul>

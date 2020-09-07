@@ -1,0 +1,184 @@
+
+/* Importando Fuentes*/
+@font-face{
+	font-family: "ruritania-1";
+	src: url('estilo-de-letras/ruritania/Ruritania.ttf');
+}
+
+@font-face{
+	font-family: "ruritania-2";
+	src: url('estilo-de-letras/ruritania/Ruritania-Outline.ttf');
+}
+@font-face{
+	font-family: "yanone";
+	src: url("estilo-de-letras/yanone.ttf");
+}
+
+@font-face{
+	font-family: "titilium";
+	src: url("estilo-de-letras/titilium.ttf");
+}
+
+
+/* Global*/
+body{
+	background: url("../img/img-2.jpg");
+	background-attachment: fixed;
+}
+
+.rutas {
+	color: black;
+	text-decoration: none;
+}
+
+/* Contenido y Logo */
+
+#contenido{
+	border-top: 10px;
+	opacity: 85%;
+    width: 60%;
+    margin: 0px auto;
+    margin-top: 30px;
+    padding: 60px;
+    background: white;
+    box-shadow: 9px 12px 69px grey;
+    height: auto;
+	font-size: 25px;
+	font-family: yanone;
+	text-align: justify;
+}
+
+
+
+/* Inicio */
+
+#titulo {
+	text-align: center;
+	font-size: 45px;
+}
+
+	/* Cajas */
+
+	#encabezado,
+	.set-i,
+	.set-m,
+	.set-f {
+		margin-top: 1%;
+		margin-bottom: 1%;
+		padding: 1%;
+	}
+
+	.caja{
+		border: 1px black solid;
+	}
+
+		/* Separacion */
+
+		.separador {
+			width: 100%;
+			height: auto;
+			box-shadow: 1px 1px 20px rgb(43, 8, 8);
+		}
+
+		
+		.set-m{
+			background: rgb(209, 26, 26);
+			width: 98%;
+			text-align: center;
+		}
+
+			
+
+		/* 
+		.set-i,
+		.set-f{
+			opacity: 40%;
+		}
+		.set-m{
+			
+			width: 18%;
+		}
+
+		 */
+
+		
+		
+		/* Caja de encabezado */
+
+		#encabezado {
+			width: 100%;
+			height: 340px;
+		}
+
+			/* Foto */
+
+			#foto {
+				float: left;
+				width: 45%;
+				height: 334px;
+				box-shadow: 1px 1px 20px rgb(247, 60, 60);
+			}
+
+			#foto img{
+				float: left;
+				margin-left: 20%;
+				width: 250px;
+				height: auto;
+			}
+
+			/* Texto */
+
+			.descripcion {
+				box-shadow: 1px 1px 20px rgb(247, 60, 60);
+				float: right;
+				width: 45%;
+				height: 305px;
+				padding: 15px;
+			} 
+
+		
+
+		/* Caja Profecional */
+
+		/* .profe {
+			float: left;
+		} */
+		
+
+
+/* Pie de pagina*/
+
+.pie_pagina {
+	opacity: 70%;
+	height: 47px;
+    background: white;
+    margin: 0px auto;
+    width: 80%;
+    height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 50px;
+    line-height: 47px;
+}
+
+.pie_pagina p{
+	font-size: 18px;
+}
+
+.pie_pagina .subir{
+	float: right;
+	width: 45px; 
+}
+
+.pie_pagina .subir img{
+	float: inherit;
+	width: inherit; 
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+

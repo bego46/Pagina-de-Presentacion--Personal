@@ -1,0 +1,153 @@
+
+<!-- Titulo -->
+
+<div id="titulo">
+	<h1>
+		{{title}}
+	</h1>
+</div>
+
+	<!-- separacion -->
+
+	<div class="separador">
+		<div class="set-m">
+			<h3	[style.color]="separador._1 != 0 ? 'black' : 'whith'">
+				{{ separador._1 }}
+			</h3>	
+		</div>
+	</div>
+	
+
+<!-- Encabezado -->
+
+<div id="encabezado">
+
+
+	<!-- Foto -->
+
+	<div id="foto">
+		<img src="assets/img/foto.jpg" />
+	</div>
+
+	<!-- Descripcion y redes sociales -->
+
+	<div class="descripcion">
+		
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		</p>
+
+		<p>Desarrollador Web</p>
+		<!-- Redes Sociales -->
+		<div>
+			<h3>Iconos de redes sociales</h3>
+		</div>
+	</div>
+	
+</div>
+
+
+<!-- Contenido -->
+
+	<!-- Acerca de Mi -->
+
+	<div class="caja">
+
+		<!-- separacion -->
+		<div class="separador">
+			<div class="set-m">
+				<h3	[style.color]="separador._2 != 0 ? 'black' : 'whith'">
+					{{ separador._2 }}
+				</h3>	
+			</div>
+		</div>
+
+			<!-- 
+			<div>
+				<ul>
+						<li><a>Nombre : {{ datos.nombre }}</a></li>
+						<li><a>Edad : {{ datos.edad }}</a></li>
+						<li>Pasatiempos :</li>
+						<ol>
+							<li>Escuchar Musica</li>
+							<li>Leer libros y manga</li>
+							<li>Ver Anime, series y peliculas</li>
+						</ol>
+
+					
+				</ul>
+			</div>
+			-->
+
+
+	</div>
+
+
+	<!-- Estudios -->
+
+	<div class="caja">
+		<!-- separacion -->
+		<div class="separador">
+			<div class="set-m">
+				<h3	[style.color]="separador._3 != 0 ? 'black' : 'whith'">
+					{{ separador._3 }}
+				</h3>	
+			</div>
+		</div>
+			
+		<!-- 	
+			<div *ngFor="let c of cursos">
+
+				<h4>
+					<a	[href]="c.link"
+						class="rutas"
+						target="_blank"
+						[title]="c.curso">
+							- {{ c.curso }}. 
+					</a>
+				</h4>
+				<p>
+					Estudiado en la institucion/plataforma de 
+					{{ c.plataforma }}.
+					<br />En el año {{ c.year }}.
+				</p>
+
+				<br />
+
+			</div> -->
+
+	</div>
+
+	<!-- Acerca de  -->
+
+	<div class="caja">
+		<!-- separacion -->
+		<div class="separador">
+			<div class="set-m">
+				<h3	[style.color]="separador._4 != 0 ? 'black' : 'whith'">
+					{{ separador._4 }}
+				</h3>	
+				
+			</div>
+		</div>
+
+		<!-- 
+		<div>
+
+			<p>Puede encontrarme en las siguientes redes sociales</p>
+			<ul >
+
+				<li *ngFor="let i of contenido">
+					- {{ i.titulo }} : 
+					<a	[href]="i.href"
+						[title]="i.titulo"
+						target="_blank"
+						class="rutas">
+						{{ i.nombre }}
+					</a>
+				</li>
+			</ul>
+		</div>
+		-->
+
+	</div>

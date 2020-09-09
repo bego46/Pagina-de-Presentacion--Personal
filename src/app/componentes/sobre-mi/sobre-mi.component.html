@@ -1,0 +1,84 @@
+<p>sobre-mi works!</p>
+
+
+
+<!-- Titulo -->
+
+<div class="separador"
+     (click)="openSet( $event )">
+	<div class="set-m">
+        <a  [routerLink]="['/inicio']"
+            [routerLinkActive]="['actived']">
+            <h2>
+                {{title}}
+            </h2>	
+        </a>
+	</div>
+</div>
+	
+
+
+<!-- Contenido -->
+
+	<!-- Sobre Mi -->
+
+	<div class="caja">
+
+		<!-- separacion -->
+		<div class="separador">
+			<div class="set-m">
+				<a	[style.color]="separador._2 != 0 ? 'black' : 'whith'"
+					[routerLink]="['/sobre-mi']"
+					[routerLinkActive]="['actived']">
+					<h3>
+						{{ separador._2 }}
+					</h3>
+				</a>	
+			</div>
+		</div>
+
+			<!-- 
+			<div>
+				<ul>
+						<li><a>Nombre : {{ datos.nombre }}</a></li>
+						<li><a>Edad : {{ datos.edad }}</a></li>
+						<li>Pasatiempos :</li>
+						<ol>
+							<li>Escuchar Musica</li>
+							<li>Leer libros y manga</li>
+							<li>Ver Anime, series y peliculas</li>
+						</ol>
+
+					
+				</ul>
+			</div>
+			-->
+
+
+	</div>
+
+	<!-- Estudios -->
+
+	<div class="caja">
+		<!-- separacion -->
+		<div class="separador">
+			<div class="set-m">
+				<h3	[style.color]="separador._3 != 0 ? 'black' : 'whith'">
+					{{ separador._3 }}
+				</h3>	
+			</div>
+		</div>
+	</div>
+
+	<!-- Acerca de  -->
+
+	<div class="caja">
+		<!-- separacion -->
+		<div class="separador">
+			<div class="set-m">
+				<h3	[style.color]="separador._4 != 0 ? 'black' : 'whith'">
+					{{ separador._4 }}
+				</h3>	
+			</div>
+		</div>
+	</div>

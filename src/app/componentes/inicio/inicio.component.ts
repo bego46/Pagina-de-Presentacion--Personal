@@ -3,7 +3,7 @@ import { Component, Renderer2, OnInit, NgModule } from '@angular/core';
 @Component({
 	selector: 'app-inicio',
 	templateUrl: './inicio.component.html',
-	styleUrls: ['./inicio.component.css']
+	styleUrls: ['./inicio.component.scss']
 })
 
 export class InicioComponent implements OnInit {
@@ -18,50 +18,38 @@ export class InicioComponent implements OnInit {
 			private renderer: Renderer2
 
 		) { 
+			this.title = 'Berlad Gonzalez Valenzuela';
 
 			this.separador = {
 				_1: 'Descripcion',
-				_2: 'Acerca de Mi',
+				_2: 'Sobre Mi',
 				_3: 'Estudios',
 				_4: 'Acerca de'
 			}
-
-			this.title = 'Berlad Gonzalez Valenzuela';
 
 			this.datos = {
 				nombre : "Berlad Gonzalez Valenzuela",
 				edad : 22
 			}
-
+			
 			this.contenido = [
 				{
-					titulo: "Facebook",
-					nombre: "Desarrollos Berlad",
-					href: "https://www.facebook.com/dberlad/"
-				},
-				{
-					titulo: "Instagram",
-					nombre: "@berlad66",
-					href: "https://www.instagram.com/berlad66/?hl=es-la"
-				},
-				{
-					titulo: "Gmail",
-					nombre: "@Berlad46",
+					name: "Gmail",
+					tipo: "@Berlad46",
 					email: "berlad46@gmail.com"
 				},
 				{
-					titulo: "LinkedIn",
-					nombre: "Berlad Gonzalez",
-					href: "https://www.linkedin.com/in/berladGonzalez"
+					name: "Celular",
+					tipo: "cel1",
+					data: "311-736-9170"
 				},
 				{
-					titulo: "Celular",
-					nombre: "311-736-9170"
+					name: "Celular",
+					tipo: "cel2",
+					data: ""
 				}
 			]
 			
-
-
 			this.cursos = [
 				{
 					curso: "Master en JavaScript: Aprender JS, jQuery, Angular, NodeJS",
@@ -110,12 +98,6 @@ export class InicioComponent implements OnInit {
 					plataforma: "El Servicio Nacional de Aprendizaje Sena",
 					link: "",
 					year: "2016"
-				},
-				{
-					curso: "Avanzado Trabajo Seguro en Alturas",
-					plataforma: "El Servicio Nacional de Aprendizaje Sena",
-					link: "",
-					year: "2016"
 				}
 			]
 					// {
@@ -130,6 +112,8 @@ export class InicioComponent implements OnInit {
 	ngOnInit(): void {
 	}
 
-	
+	openSet( event ) {
+		console.log(event);
+	}
 
 }

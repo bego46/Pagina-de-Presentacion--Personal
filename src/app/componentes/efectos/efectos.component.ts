@@ -5,7 +5,7 @@ declare var $:any;
 @Component({
   selector: 'app-efectos',
   templateUrl: './efectos.component.html',
-  styleUrls: ['./efectos.component.css']
+  styleUrls: ['./efectos.component.scss']
 })
 export class EfectosComponent implements OnInit {
 

@@ -1,21 +1,15 @@
 
+
 <!-- Titulo -->
 
-<div id="titulo">
-	<h1>
-		{{title}}
-	</h1>
-</div>
-
-	<!-- separacion -->
-
-	<div class="separador">
-		<div class="set-m">
-			<h3	[style.color]="separador._1 != 0 ? 'black' : 'whith'">
-				{{ separador._1 }}
-			</h3>	
-		</div>
+<div class="separador"
+	 (click)="openSet( $event )">
+	<div class="set-m">
+		<h2>
+			{{title}}
+		</h2>	
 	</div>
+</div>
 	
 
 <!-- Encabezado -->
@@ -33,15 +27,46 @@
 
 	<div class="descripcion">
 		
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit.
-		</p>
+		<span>
+			descripcion personal
+		</span>
 
 		<p>Desarrollador Web</p>
 		<!-- Redes Sociales -->
-		<div>
-			<h3>Iconos de redes sociales</h3>
+		<div id="iconos">
+
+			<a	target="_blank"
+				href="https://www.facebook.com/dberlad/"
+				title="Facebook">
+				<img src="assets/img/logos/facebook.svg" />
+			</a>
+
+			<a	target="_blank"
+				href="https://www.instagram.com/berlad66/?hl=es-la"
+				title="Instagram">
+				<img src="assets/img/logos/instagram.svg" />
+			</a>
+
+			<a	target="_blank"
+				href="https://github.com/bego46"
+				title="Github">
+				<img src="assets/img/logos/github.svg" />
+			</a>
+
+			<a	target="_blank"
+				email="berlad46@gmail.com"
+				title="Gmail">
+				<img src="assets/img/logos/gmail.svg" />
+			</a>
+
+			<a	target="_blank"
+				href="https://www.linkedin.com/in/berladGonzalez"
+				title="LinkedIn">
+				<img src="assets/img/logos/linkedin.svg" />
+			</a>
+
 		</div>
+
 	</div>
 	
 </div>
@@ -49,39 +74,24 @@
 
 <!-- Contenido -->
 
-	<!-- Acerca de Mi -->
+	<!-- Sobre Mi -->
 
 	<div class="caja">
 
 		<!-- separacion -->
 		<div class="separador">
 			<div class="set-m">
-				<h3	[style.color]="separador._2 != 0 ? 'black' : 'whith'">
-					{{ separador._2 }}
-				</h3>	
+				<a	[style.color]="separador._2 != 0 ? 'black' : 'whith'"
+					[routerLink]="['/sobre-mi']"
+					[routerLinkActive]="['actived']">
+					<h3>
+						{{ separador._2 }}
+					</h3>
+				</a>	
 			</div>
 		</div>
-
-			<!-- 
-			<div>
-				<ul>
-						<li><a>Nombre : {{ datos.nombre }}</a></li>
-						<li><a>Edad : {{ datos.edad }}</a></li>
-						<li>Pasatiempos :</li>
-						<ol>
-							<li>Escuchar Musica</li>
-							<li>Leer libros y manga</li>
-							<li>Ver Anime, series y peliculas</li>
-						</ol>
-
-					
-				</ul>
-			</div>
-			-->
-
-
+		
 	</div>
-
 
 	<!-- Estudios -->
 
@@ -93,6 +103,23 @@
 					{{ separador._3 }}
 				</h3>	
 			</div>
+		</div>
+
+		<!-- 
+		<div class="porcentage">
+			<img src="assets/img/icon/logo-html5.svg"/>
+			<img src="assets/img/icon/logo-css3.svg"/>
+			<img src="assets/img/icon/logo-javascript.svg"/>
+			<img src="assets/img/icon/logo-nodejs.svg"/>
+		</div>
+		 -->
+		<div class="porcentage">
+			<div class="html"></div>
+			<div class="css"></div>
+			<div class="javascript"></div>
+			<div class="angular"></div>
+			<div class="ionic"></div>
+			<div class="node"></div>
 		</div>
 			
 		<!-- 	
@@ -134,7 +161,7 @@
 		<!-- 
 		<div>
 
-			<p>Puede encontrarme en las siguientes redes sociales</p>
+			<p>Puede comunicarce conmigo de las siguientes formas :</p>
 			<ul >
 
 				<li *ngFor="let i of contenido">
@@ -150,4 +177,12 @@
 		</div>
 		-->
 
+		<div>
+			<span>Elementos usados</span>
+<!-- 			
+			<div>Iconos diseñados por <a href="https://www.flaticon.es/autores/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></span>
+			<div>Iconos diseñados por <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
+ -->
+		</div>
+		
 	</div>

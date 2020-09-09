@@ -1,0 +1,60 @@
+
+  // Porcentage
+/*
+
+.barra-progreso{
+  &,
+  &:before,
+  &:after{
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+  }
+
+  margin: auto;
+  position: relative;
+  transform: rotate(120deg);
+  background: linear-gradient(
+    0deg,
+    rgb(8, 114, 8) 50%,
+    rgba(rgb(56, 54, 54),.2) 50%
+  );
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+  }
+
+  &:before {
+    content: "HTML";
+    background: white content-box;
+    transform: rotate(-120deg);
+    padding: .5em;
+    box-sizing: border-box;
+    font-size: 2rem;
+    line-height: 8rem;
+  }
+  &::after{
+    content: "60%";
+    line-height: 13rem;
+    transform: scale(1.1) rotate(-120deg);
+    background: linear-gradient(
+      transparent 50%,
+      white 50%
+    );
+    
+  }
+}
+*/
+
+.card{
+  margin: 50px;
+  width: 500px;
+}
+
+.card div{
+  margin-bottom: 20px;
+}

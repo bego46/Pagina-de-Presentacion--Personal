@@ -1,0 +1,11 @@
+<div class="acc-header">
+    <div class="headerTitle">
+        {{title}}
+    </div>
+    <div class="arrow"> <i class="arrow-down"></i> </div>
+</div>
+<div *ngIf="showBody">
+    <div class="acc-body">
+        <ng-content></ng-content>
+    </div>
+</div>

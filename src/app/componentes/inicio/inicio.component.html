@@ -26,12 +26,7 @@
 	<!-- Descripcion y redes sociales -->
 
 	<div class="descripcion">
-		
-		<span>
-			descripcion personal
-		</span>
 
-		<p>Desarrollador Web</p>
 		<!-- Redes Sociales -->
 		<div id="iconos">
 
@@ -66,6 +61,12 @@
 			</a>
 
 		</div>
+	
+		<span>
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae explicabo at inventore aliquid et? Officia ratione, qui, tempore dolorum laudantium sint non, cum fuga dolorem officiis iure nam sequi porro.
+		</span>
+
+		<h5>Desarrollador Web</h5>
 
 	</div>
 	
@@ -81,8 +82,7 @@
 		<!-- separacion -->
 		<div class="separador">
 			<div class="set-m">
-				<a	[style.color]="separador._2 != 0 ? 'black' : 'whith'"
-					[routerLink]="['/sobre-mi']"
+				<a	[routerLink]="['/sobre-mi']"
 					[routerLinkActive]="['actived']">
 					<h3>
 						{{ separador._2 }}
@@ -96,93 +96,35 @@
 	<!-- Estudios -->
 
 	<div class="caja">
+
 		<!-- separacion -->
 		<div class="separador">
 			<div class="set-m">
-				<h3	[style.color]="separador._3 != 0 ? 'black' : 'whith'">
-					{{ separador._3 }}
-				</h3>	
+				<a	[routerLink]="['/estudios']"
+					[routerLinkActive]="['actived']">
+					<h3>
+						{{ separador._3 }}
+					</h3>	
+				</a>
 			</div>
 		</div>
-
-		<!-- 
-		<div class="porcentage">
-			<img src="assets/img/icon/logo-html5.svg"/>
-			<img src="assets/img/icon/logo-css3.svg"/>
-			<img src="assets/img/icon/logo-javascript.svg"/>
-			<img src="assets/img/icon/logo-nodejs.svg"/>
-		</div>
-		 -->
-		<div class="porcentage">
-			<div class="html"></div>
-			<div class="css"></div>
-			<div class="javascript"></div>
-			<div class="angular"></div>
-			<div class="ionic"></div>
-			<div class="node"></div>
-		</div>
-			
-		<!-- 	
-			<div *ngFor="let c of cursos">
-
-				<h4>
-					<a	[href]="c.link"
-						class="rutas"
-						target="_blank"
-						[title]="c.curso">
-							- {{ c.curso }}. 
-					</a>
-				</h4>
-				<p>
-					Estudiado en la institucion/plataforma de 
-					{{ c.plataforma }}.
-					<br />En el año {{ c.year }}.
-				</p>
-
-				<br />
-
-			</div> -->
 
 	</div>
 
 	<!-- Acerca de  -->
 
 	<div class="caja">
+		
 		<!-- separacion -->
 		<div class="separador">
 			<div class="set-m">
-				<h3	[style.color]="separador._4 != 0 ? 'black' : 'whith'">
-					{{ separador._4 }}
-				</h3>	
-				
+				<a	[routerLink]="['/acerca-de']"
+					[routerLinkActive]="['actived']">
+					<h3>
+						{{ separador._4 }}
+					</h3>	
+				</a>
 			</div>
 		</div>
 
-		<!-- 
-		<div>
-
-			<p>Puede comunicarce conmigo de las siguientes formas :</p>
-			<ul >
-
-				<li *ngFor="let i of contenido">
-					- {{ i.titulo }} : 
-					<a	[href]="i.href"
-						[title]="i.titulo"
-						target="_blank"
-						class="rutas">
-						{{ i.nombre }}
-					</a>
-				</li>
-			</ul>
-		</div>
-		-->
-
-		<div>
-			<span>Elementos usados</span>
-<!-- 			
-			<div>Iconos diseñados por <a href="https://www.flaticon.es/autores/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></span>
-			<div>Iconos diseñados por <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
- -->
-		</div>
-		
 	</div>

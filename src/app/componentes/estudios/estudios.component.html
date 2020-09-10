@@ -1,1 +1,154 @@
-<p>estudios works!</p>
+
+
+<!-- Titulo -->
+<div class="caja">
+
+	<div class="separador">
+		<div class="set-m">
+			<a  [routerLink]="['/inicio']"
+				[routerLinkActive]="['actived']">
+				<h2>
+					{{title}}
+				</h2>	
+			</a>
+		</div>
+	</div>
+
+</div>
+	
+
+<!-- Contenido -->
+
+	<!-- Sobre Mi -->
+
+	<div class="caja">
+
+		<!-- separacion -->
+		<div class="separador">
+			<div class="set-m">
+				<a	[style.color]="separador._2 != 0 ? 'black' : 'whith'"
+					[routerLink]="['/sobre-mi']"
+					[routerLinkActive]="['actived']">
+					<h3>
+						{{ separador._2 }}
+					</h3>
+				</a>	
+			</div>
+		</div>
+		
+	</div>
+
+	<!-- Estudios -->
+
+	<div class="caja">
+		<!-- separacion -->
+		<div class="separador">
+			<div class="set-m">
+				<a	[routerLink]="['/estudios']"
+					[routerLinkActive]="['actived']">
+					<h3	[style.color]="separador._3 != 0 ? 'black' : 'whith'">
+						{{ separador._3 }}
+					</h3>	
+				</a>
+			</div>
+		</div>
+
+		<div class="logos">
+
+			<div class="logo" *ngFor="let i of cursos">
+
+				<div class="porcentage">
+					<div [class]="i.porcentage"></div>
+				</div>
+				
+				<div class="dataTex">
+					<img [src]="i.logo">
+
+					<div>
+						<h4>
+							<a	[href]="i.link"
+								class="rutas"
+								target="_blank"
+								[title]="i.curso">
+									{{ i.curso }}. 
+							</a>
+						</h4>
+						<br/>
+						<p>
+							Estudiado en la institucion/plataforma {{ i.plataforma }}.
+							<br />el {{ i.year }}.
+						</p>
+
+						<br />
+
+					</div>
+				</div>
+
+			</div>
+
+			<!-- <img src="assets/img/icon/logo-css3.svg">
+
+			<img src="assets/img/icon/logo-javascript.svg">
+
+			<img src="assets/img/icon/logo-angular.svg">
+
+			<img src="assets/img/icon/logo-ionic.svg">
+
+			<img src="assets/img/icon/logo-github.svg">
+
+			<img src="assets/img/icon/logo-nodejs.svg"> -->
+
+
+		</div>
+		
+
+<!-- 
+		<div class="porcentage">
+			<div class="html"></div>
+			<div class="css"></div>
+			<div class="javascript"></div>
+			<div class="angular"></div>
+			<div class="ionic"></div>
+			<div class="node"></div>
+		</div>
+			 -->
+<!-- 			
+			<div *ngFor="let c of cursos">
+
+				<h4>
+					<a	[href]="c.link"
+						class="rutas"
+						target="_blank"
+						[title]="c.curso">
+							- {{ c.curso }}. 
+					</a>
+				</h4>
+				<p>
+					Estudiado en la institucion/plataforma de 
+					{{ c.plataforma }}.
+					<br />En el año {{ c.year }}.
+				</p>
+
+				<br />
+
+			</div> -->
+
+	</div>
+
+	<!-- Acerca de  -->
+
+	<div class="caja">
+
+		<!-- separacion -->
+		<div class="separador">
+			<div class="set-m">
+				<a	[routerLink]="['/acerca-de']"
+					[routerLinkActive]="['actived']">
+					<h3>
+						{{ separador._4 }}
+					</h3>	
+				</a>
+			</div>
+		</div>
+
+	</div>

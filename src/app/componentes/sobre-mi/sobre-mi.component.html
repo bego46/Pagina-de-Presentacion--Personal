@@ -1,20 +1,20 @@
-<p>sobre-mi works!</p>
-
-
 
 <!-- Titulo -->
-
-<div class="separador"
-     (click)="openSet( $event )">
-	<div class="set-m">
-        <a  [routerLink]="['/inicio']"
-            [routerLinkActive]="['actived']">
-            <h2>
-                {{title}}
-            </h2>	
-        </a>
+<div class="caja">
+	
+	<div class="separador">
+		<div class="set-m">
+			<a	[routerLink]="['/inicio']"
+				[routerLinkActive]="['actived']">
+				<h2>
+					{{title}}
+				</h2>	
+			</a>
+		</div>
 	</div>
+
 </div>
+
 	
 
 
@@ -27,8 +27,7 @@
 		<!-- separacion -->
 		<div class="separador">
 			<div class="set-m">
-				<a	[style.color]="separador._2 != 0 ? 'black' : 'whith'"
-					[routerLink]="['/sobre-mi']"
+				<a	[routerLink]="['/sobre-mi']"
 					[routerLinkActive]="['actived']">
 					<h3>
 						{{ separador._2 }}
@@ -37,7 +36,7 @@
 			</div>
 		</div>
 
-			<!-- 
+			
 			<div>
 				<ul>
 						<li><a>Nombre : {{ datos.nombre }}</a></li>
@@ -52,7 +51,7 @@
 					
 				</ul>
 			</div>
-			-->
+			
 
 
 	</div>
@@ -60,25 +59,35 @@
 	<!-- Estudios -->
 
 	<div class="caja">
+
 		<!-- separacion -->
 		<div class="separador">
 			<div class="set-m">
-				<h3	[style.color]="separador._3 != 0 ? 'black' : 'whith'">
-					{{ separador._3 }}
-				</h3>	
+				<a	[routerLink]="['/estudios']"
+					[routerLinkActive]="['actived']">
+					<h3>
+						{{ separador._3 }}
+					</h3>	
+				</a>
 			</div>
 		</div>
+
 	</div>
 
 	<!-- Acerca de  -->
 
 	<div class="caja">
+		
 		<!-- separacion -->
 		<div class="separador">
 			<div class="set-m">
-				<h3	[style.color]="separador._4 != 0 ? 'black' : 'whith'">
-					{{ separador._4 }}
-				</h3>	
+				<a	[routerLink]="['/acerca-de']"
+					[routerLinkActive]="['actived']">
+					<h3>
+						{{ separador._4 }}
+					</h3>	
+				</a>
 			</div>
 		</div>
+
 	</div>

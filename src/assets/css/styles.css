@@ -19,6 +19,11 @@
 	src: url("estilo-de-letras/titilium.ttf");
 }
 
+@font-face{
+	font-family: "roman";
+	src: url("estilo-de-letras/frutiger-55-roman.otf");
+}
+
 
 /* Global*/
 body{
@@ -35,7 +40,7 @@ body{
 
 #contenido{
 	border-top: 10px;
-	opacity: 85%;
+	opacity: 90%;
     width: 60%;
     margin: 0px auto;
     margin-top: 30px;
@@ -44,7 +49,7 @@ body{
     box-shadow: 9px 12px 69px grey;
     height: auto;
 	font-size: 25px;
-	font-family: yanone;
+	font-family: 'Times New Roman', Times, serif;
 	text-align: justify;
 }
 
@@ -54,123 +59,149 @@ body{
 
 	/* Cajas */
 
-	#encabezado,
+	/* #encabezado,
 	.set-i,
 	.set-m,
 	.set-f {
 		margin-top: 1%;
 		margin-bottom: 1%;
 		padding: 1%;
-	}
+	} */
 
+
+	
 	
 
 		/* Separacion */
 
-		.separador {
+		
+		
+		.separador,
+		#encabezado,
+		#foto,
+		.descripcion {
+			margin-top: 1em
+		}
+		
+		.set-m{
 			width: 100%;
 			height: auto;
 			box-shadow: 1px 1px 20px rgb(43, 8, 8);
-		}
-
-		
-		.set-m{
 			background: rgb(209, 26, 26);
-			width: 98%;
 			text-align: center;
 			transition: all 350ms;
 			font-size: 30px;
+			border-radius: 30%;
 		}
 
 		.set-m:hover{
-			background: rgb(4, 156, 42);
-			width: 98%;
+			background: rgb(231, 96, 5);
+			box-shadow: 1px 1px 3rem rgb(2, 119, 103);
+			width: 100%;
+			border-radius: 15%;
 			text-align: center;
 			cursor: pointer;
 			font-size: 45px;
 		}
 
-			
-
-		/* 
-		.set-i,
-		.set-f{
-			opacity: 40%;
-		}
-		.set-m{
-			
-			width: 18%;
+		.set-m a{
+			text-decoration: none;
+			color: black;
 		}
 
-		 */
-
-		
+	
 		
 		/* Caja de encabezado */
 
 		#encabezado {
 			width: 100%;
-			height: 340px;
+			height: auto;
 			display: flex;
 			flex-wrap: wrap;
-			margin: 2em;
 		}
 
 			/* Foto */
 
-			#foto,
-			#foto img{
-				width: 20rem;
-				height: 20rem;
-				border-radius: 50%;
-			}
-
+						
 			#foto {
-				box-shadow: 1px 1px 20px rgb(247, 60, 60);
 				margin-right: 2em;
+				width: 100%;
+				height: 35rem;
+				display: flex;
+				flex-wrap: wrap;
 			}
-
+			
 			#foto img{
+				width: 25rem;
+				height: 25rem;
+				border-radius: 50%;
+				box-shadow: 1px 1px 12rem rgb(0, 0, 0);
 				margin-left: 20%;
 				margin: auto;
-				position: absolute;
+				transition: all 350ms;
 			}
+
+			#foto img:hover{
+				width: 30rem;
+				height: 30rem;
+				border-radius: 50%;
+				box-shadow: 1px 1px 8rem rgb(2, 119, 103);
+				margin-left: 20%;
+				margin: auto;
+			}
+
+			
 
 			/* Texto */
 
 			.descripcion {
-				box-shadow: 1px 1px 20px rgb(247, 60, 60);
-				float: left;
-				width: 45%;
-				height: 305px;
-				padding: 15px;
+				background: gray;
+				border-radius: 10%;
+				box-shadow: 1px 1px 2rem rgb(43, 8, 8);
+				width: 100%;
+				height: auto;
+				padding: 1rem;
+				transition: all 1000ms;
+				font-size: 0px;
+				color: gray;
+			} 
+
+			.descripcion:hover {
+				background: white;
+				box-shadow: 1px 1px 2rem rgb(2, 119, 103);
+				width: inherit;
+				height: auto;
+				padding: 1rem;
+				font-size: 25px;
+				color: black;
+				text-align: justify;
 			} 
 
 			#iconos {
-				display: flex;
+				width: 100%;
+				display: flex table;
 				flex-wrap: wrap;
-				margin-top: 2em;
+				
 			}
-
+			
 			#iconos img{
+				margin-left: 6rem;
+				display: flex table;
 				padding: 4px;
 				width: 3rem;
+				height: 4rem;
 				transition: all 350ms;
+
 			}
 
 			#iconos img:hover{
 				cursor: pointer;
 				width: 4rem;
+
 			}
 
 		
 
-		/* Caja Profecional */
-
-		/* .profe {
-			float: left;
-		} */
-		
 
 
 /* Pie de pagina*/

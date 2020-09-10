@@ -1,0 +1,232 @@
+	/* Logos */
+
+  .logos,
+  .logo {
+    width: 100%;
+    height: auto;
+  }
+
+  .logos img{
+    width: 10rem;
+  }
+
+  .logo {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .dataTex,
+  .dataTex img,
+  .dataTex div{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .dataTex{
+    margin-top: 2rem;
+    width: 60%;
+    font-size: 0px;
+    transition: all 300ms;
+  }
+
+  .dataTex img{
+    width: 12rem;
+    height: 12rem;
+  }
+  
+  
+  .dataTex div{
+    padding: 1rem;
+    width: 50%;
+    transition: all 300ms;    
+  }
+
+  .dataTex:hover{
+    width: 55%;
+    padding: 2rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    box-shadow: 1px 2px 5rem aqua;
+    font-size: 20px;
+    text-align: justify;
+    background-image: radial-gradient(
+      white 5%,
+      aqua 40%
+      );
+    
+  }
+  
+  
+  
+ // Porcentage forma resumida
+
+ @function progress($percent){
+    $deg: $percent/100 * 180;
+    @return #{$deg}deg;
+  }
+  
+  @mixin circular-progress($percent,$name,$color,$bgcolor) {
+    $progress: progress($percent);
+  
+    &,
+    &:before,
+    &:after{
+      width: 12rem;
+      height: 12rem;
+      border-radius: 50%;
+    }
+  
+    margin: auto;
+    position: relative;
+    transform: rotate($progress);
+    background: linear-gradient(
+      0deg,
+      $color 50%,
+      rgba($color,.2) 50%
+    );
+  
+    &:before,
+    &:after{
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: center;
+    }
+    &:before{
+      content: "#{$name}";
+      background: $bgcolor content-box;
+      transform: rotate(-#{$progress});
+      padding: .5em;
+      box-sizing: border-box;
+      font-size: 1.9rem;
+      line-height: 8rem;
+    }
+    &:after{
+      content: "#{$percent}%";
+      transform: scale(1.1) rotate(-#{$progress});
+      line-height: 14rem;
+      background: linear-gradient(
+        transparent 50%,
+        $bgcolor 50%
+      );
+    }
+  }
+  
+  .porcentage {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    margin-block-end: 2rem;
+  }
+
+  
+  
+  .html {
+
+    @include circular-progress(
+      25,
+      HTML5,
+      rgb(255, 102, 0),
+      white
+    )
+  }
+  
+  .css {
+    @include circular-progress(
+      20,
+      CSS,
+      lighten(rgb(8, 8, 180),20),
+      white
+    )
+  }
+  
+  .javascript {
+    @include circular-progress(
+      38,
+      JS,
+      yellow,
+      white
+    )
+  }
+  
+  .angular {
+    @include circular-progress(
+      42,
+      Angular,
+      lighten(rgb(138, 6, 6),20),
+      white
+    )
+  }
+  
+  .ionic {
+    @include circular-progress(
+      39,
+      Ionic,
+      lighten(blue,20),
+      white
+    )
+  }
+
+  .node {
+    @include circular-progress(
+      15,
+      Node,
+      lighten(rgb(29, 59, 33),20),
+      white
+    )
+  }
+
+  .seguridad {
+    @include circular-progress(
+      5,
+      "S.I.",
+      lighten(rgb(8, 8, 139),20),
+      white
+    )
+  }
+
+  .github {
+    @include circular-progress(
+      19,
+      Node,
+      lighten(rgb(43, 43, 44),20),
+      white
+    )
+  }
+
+  .programacion {
+    @include circular-progress(
+      22,
+      "< / >",
+      lighten(rgb(20, 20, 20),20),
+      white
+    )
+  }
+
+  .ingles {
+    @include circular-progress(
+      20,
+      Ingles,
+      lighten(rgb(16, 128, 128),20),
+      white
+    )
+  }
+
+  .excel {
+    @include circular-progress(
+      36,
+      Excel,
+      lighten(rgb(5, 97, 5),20),
+      white
+    )
+  }
+
+  .photoshop {
+    @include circular-progress(
+      18,
+      Photoshop,
+      lighten(rgb(8, 8, 150),20),
+      white
+    )
+  }

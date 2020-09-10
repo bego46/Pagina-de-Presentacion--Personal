@@ -1,1 +1,151 @@
-<p>acerca-de works!</p>
+
+
+<!-- Titulo -->
+<div class="caja">
+
+	<div class="separador">
+		<div class="set-m">
+			<a	[routerLink]="['/inicio']"
+				[routerLinkActive]="['actived']">
+				<h2>
+					{{title}}
+				</h2>	
+			</a>
+		</div>
+	</div>
+	
+</div>
+
+	
+
+<!-- Contenido -->
+
+	<!-- Sobre Mi -->
+
+	<div class="caja">
+
+		<!-- separacion -->
+		<div class="separador">
+			<div class="set-m">
+				<a	[routerLink]="['/sobre-mi']"
+					[routerLinkActive]="['actived']">
+					<h3>
+						{{ separador._2 }}
+					</h3>
+				</a>	
+			</div>
+		</div>
+		
+	</div>
+
+	<!-- Estudios -->
+
+	<div class="caja">
+
+		<!-- separacion -->
+		<div class="separador">
+			<div class="set-m">
+				<a	[routerLink]="['/estudios']"
+					[routerLinkActive]="['actived']">
+					<h3>
+						{{ separador._3 }}
+					</h3>	
+				</a>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Acerca de  -->
+
+	<div class="caja">
+		
+		<!-- separacion -->
+		<div class="separador">
+			<div class="set-m">
+				<a	[routerLink]="['/acerca-de']"
+					[routerLinkActive]="['actived']">
+					<h3>
+						{{ separador._4 }}
+					</h3>	
+				</a>
+			</div>
+		</div>
+
+		
+		<div id="com">
+
+			<p>Puede comunicarce conmigo de las siguientes formas :</p>
+			<ul >
+
+				<li *ngFor="let i of contenido">
+					- {{ i.tipo }} : 
+					<a	[href]="i.href"
+						[title]="i.titulo"
+						target="_blank"
+						class="rutas">
+						{{ i.name }} / {{ i.data }}
+					</a>
+				</li>
+				
+			</ul>
+
+		</div>
+		
+
+		<div id="use">
+			<h4>Elementos externos usados</h4>
+			
+			<div>
+				Iconos diseñados por 
+				<a	[style.color]="separador._2 != 0 ? 'black' : 'whith'" 
+					href="https://www.flaticon.es/autores/pixel-perfect" 
+					title="Pixel perfect"
+					target="_blank">
+					Pixel perfect
+				</a>
+				from 
+				<a	[style.color]="separador._2 != 0 ? 'black' : 'whith'"
+					href="https://www.flaticon.es/" 
+					title="Flaticon"
+					target="_blank">
+					www.flaticon.es
+				</a>
+			</div>
+
+			<div>
+				Iconos diseñados por 
+				<a	[style.color]="separador._2 != 0 ? 'black' : 'whith'" 
+					href="https://www.flaticon.es/autores/freepik" 
+					title="Freepik"
+					target="_blank">
+					Freepik
+				</a>
+				from 
+				<a	[style.color]="separador._2 != 0 ? 'black' : 'whith'"
+					href="https://www.flaticon.es/" 
+					title="Flaticon"
+					target="_blank">
+					www.flaticon.es
+				</a>
+			</div>
+
+			<div>
+				Iconos diseñados por
+				<a	[style.color]="separador._2 != 0 ? 'black' : 'whith'"
+					target="_blank"
+					href="https://www.flaticon.es/autores/kiranshastry" 
+					title="Kiranshastry">
+					Kiranshastry
+				</a> 
+				from 
+				<a	[style.color]="separador._2 != 0 ? 'black' : 'whith'"
+					target="_blank"
+					href="https://www.flaticon.es/" 
+					title="Flaticon">
+					www.flaticon.es
+				</a>
+			</div>
+		</div>
+		
+	</div>

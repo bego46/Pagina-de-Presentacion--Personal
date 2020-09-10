@@ -115,5 +115,5 @@ export class InicioComponent implements OnInit {
 	openSet( event ) {
 		console.log(event);
 	}
-
+	
 }

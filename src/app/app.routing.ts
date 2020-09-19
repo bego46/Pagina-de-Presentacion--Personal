@@ -14,7 +14,7 @@ import { SobreMiComponent } from './componentes/sobre-mi/sobre-mi.component';
 
 // Definiendo rutas
 const appRoutes: Routes = [
-	{path: '', component: ErrorComponent},
+	{path: '', component: InicioComponent},
 	{path: 'inicio', component: InicioComponent},
 	{path: 'sobre-mi', component: SobreMiComponent},
 	{path: 'estudios', component: EstudiosComponent},

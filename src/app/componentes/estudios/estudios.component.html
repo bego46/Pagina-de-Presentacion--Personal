@@ -1,21 +1,72 @@
 
 
 <!-- Titulo -->
-<div class="caja">
 
-	<div class="separador">
-		<div class="set-m">
-			<a  [routerLink]="['/inicio']"
-				[routerLinkActive]="['actived']">
-				<h2>
-					{{title}}
-				</h2>	
-			</a>
-		</div>
+<div class="separador">
+	<div class="set-m">
+		<a	[routerLink]="['/inicio']"
+			[routerLinkActive]="['actived']">
+			<h2>
+				{{title}}
+			</h2>
+		</a>
 	</div>
-
 </div>
 	
+
+<!-- Encabezado -->
+
+<div id="encabezado">
+
+
+	<!-- Foto -->
+
+	<div id="foto">
+		<img src="assets/img/foto.jpg" />
+	</div>
+
+	<!-- Descripcion y redes sociales -->
+
+	<div class="descripcion">
+
+		<!-- Redes Sociales -->
+		<div id="iconos">
+
+			<a	target="_blank"
+				href="https://www.facebook.com/dberlad/"
+				title="Facebook">
+				<img src="assets/img/logos/facebook.svg" />
+			</a>
+
+			<a	target="_blank"
+				href="https://www.instagram.com/berlad66/?hl=es-la"
+				title="Instagram">
+				<img src="assets/img/logos/instagram.svg" />
+			</a>
+
+			<a	target="_blank"
+				href="https://github.com/bego46"
+				title="Github">
+				<img src="assets/img/logos/github.svg" />
+			</a>
+
+			<a	target="_blank"
+				href="https://www.linkedin.com/in/berladGonzalez"
+				title="LinkedIn">
+				<img src="assets/img/logos/linkedin.svg" />
+			</a>
+
+		</div>
+	
+		<p>
+			Me considero una persona xtremadamente motivada y preparada para desarrollar constantemente mis habilidades y crecer profesionalmente. Confío en mi capacidad de adaptación en el laboral.
+		</p>
+
+		<h5>Desarrollador Web</h5>
+
+	</div>
+	
+</div>
 
 <!-- Contenido -->
 
@@ -26,8 +77,7 @@
 		<!-- separacion -->
 		<div class="separador">
 			<div class="set-m">
-				<a	[style.color]="separador._2 != 0 ? 'black' : 'whith'"
-					[routerLink]="['/sobre-mi']"
+				<a	[routerLink]="['/sobre-mi']"
 					[routerLinkActive]="['actived']">
 					<h3>
 						{{ separador._2 }}
@@ -44,95 +94,53 @@
 		<!-- separacion -->
 		<div class="separador">
 			<div class="set-m">
-				<a	[routerLink]="['/estudios']"
+				<a	[routerLink]="['/inicio']"
 					[routerLinkActive]="['actived']">
-					<h3	[style.color]="separador._3 != 0 ? 'black' : 'whith'">
+					<h3>
 						{{ separador._3 }}
 					</h3>	
 				</a>
 			</div>
 		</div>
 
-		<div class="logos">
+		<div class="conten">
 
-			<div class="logo" *ngFor="let i of cursos">
+			<ul class="logo" *ngFor="let i of cursos">
 
-				<div class="porcentage">
-					<div [class]="i.porcentage"></div>
-				</div>
-				
-				<div class="dataTex">
-					<img [src]="i.logo">
+				<li>
 
-					<div>
-						<h4>
-							<a	[href]="i.link"
-								class="rutas"
-								target="_blank"
-								[title]="i.curso">
-									{{ i.curso }}. 
-							</a>
-						</h4>
-						<br/>
-						<p>
-							Estudiado en la institucion/plataforma {{ i.plataforma }}.
-							<br />el {{ i.year }}.
-						</p>
+					<h4> {{ i.title }} </h4>
+					<ul>
+						<img [src]="i.logo">
+						<li>
+							<p>
+								{{ i.text }} 
+								<a	target="_blank"
+									[href]="i.link"
+									[title]="i.curso">
+									{{ i.textLink }}
+								</a>
+							</p>
+						</li>
+						<div [class]="i.p"></div>
+						
+						<!-- 
+							title: "node js",
+							logo: "assets/img/logos/nodejs.svg",
+							text: "Estudidando actualmente en la plataforma digital",
+							curso: "Node: De cero a experto",
+							link: "https://www.udemy.com/course/node-de-cero-a-experto/",
+							textLink: "Udemy",
+							p: "node"
+					 	-->
+					</ul>
 
-						<br />
+				</li>
 
-					</div>
-				</div>
-
-			</div>
-
-			<!-- <img src="assets/img/icon/logo-css3.svg">
-
-			<img src="assets/img/icon/logo-javascript.svg">
-
-			<img src="assets/img/icon/logo-angular.svg">
-
-			<img src="assets/img/icon/logo-ionic.svg">
-
-			<img src="assets/img/icon/logo-github.svg">
-
-			<img src="assets/img/icon/logo-nodejs.svg"> -->
-
-
+			</ul>
+			
 		</div>
 		
-
-<!-- 
-		<div class="porcentage">
-			<div class="html"></div>
-			<div class="css"></div>
-			<div class="javascript"></div>
-			<div class="angular"></div>
-			<div class="ionic"></div>
-			<div class="node"></div>
-		</div>
-			 -->
-<!-- 			
-			<div *ngFor="let c of cursos">
-
-				<h4>
-					<a	[href]="c.link"
-						class="rutas"
-						target="_blank"
-						[title]="c.curso">
-							- {{ c.curso }}. 
-					</a>
-				</h4>
-				<p>
-					Estudiado en la institucion/plataforma de 
-					{{ c.plataforma }}.
-					<br />En el año {{ c.year }}.
-				</p>
-
-				<br />
-
-			</div> -->
-
 	</div>
 
 	<!-- Acerca de  -->

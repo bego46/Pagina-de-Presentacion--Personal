@@ -59,18 +59,61 @@ body{
 
 	/* Cajas */
 
-	/* #encabezado,
-	.set-i,
-	.set-m,
-	.set-f {
-		margin-top: 1%;
-		margin-bottom: 1%;
-		padding: 1%;
-	} */
-
-
 	
-	
+.descripcion {
+    background: gray;
+    box-shadow: 1px 1px 2rem rgb(43, 8, 8);
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    transition: all 900ms;
+    font-size: 0px;
+	color: gray;
+} 
+
+.descripcion:hover {
+    background: white;
+    box-shadow: 1px 1px 2rem rgb(2, 119, 103);
+    border-radius: 10%;
+    width: inherit;
+    height: auto;
+    padding: 1rem;
+    font-size: 20px;
+    color: black;
+    text-align: justify;
+} 
+
+.descripcion p{
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+#iconos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#iconos a{
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+#iconos img{
+    border-radius: 20%;
+    padding: 4px;
+    width: 3rem;
+    height: 4rem;
+    transition: all 350ms;
+}
+
+#iconos img:hover{
+    cursor: pointer;
+    width: 4rem;
+    box-shadow: 1px 1px 2rem black;
+    background: gray;
+    transition: all 350ms;
+}
 
 		/* Separacion */
 
@@ -78,35 +121,42 @@ body{
 		
 		.separador,
 		#encabezado,
-		#foto,
 		.descripcion {
 			margin-top: 1em
 		}
 		
 		.set-m{
+			background: gray;
+    		box-shadow: 1px 1px 0.7rem rgb(43, 8, 8);
 			width: 100%;
 			height: auto;
-			box-shadow: 1px 1px 20px rgb(43, 8, 8);
-			background: rgb(209, 26, 26);
 			text-align: center;
-			transition: all 350ms;
 			font-size: 30px;
-			border-radius: 30%;
+			transition: all 350ms;
 		}
 
 		.set-m:hover{
-			background: rgb(231, 96, 5);
-			box-shadow: 1px 1px 3rem rgb(2, 119, 103);
+			background: radial-gradient(
+				black 20%,
+				gray 70%
+			);
+			box-shadow: 1px 1px 2rem rgb(2, 119, 103);
+			color: rgb(94, 253, 253);
 			width: 100%;
-			border-radius: 15%;
 			text-align: center;
 			cursor: pointer;
-			font-size: 45px;
+			font-size: 35px;
+			border-radius: 15%;
 		}
 
 		.set-m a{
 			text-decoration: none;
 			color: black;
+		}
+
+		.set-m a:hover{
+			text-decoration: none;
+			color: rgb(94, 253, 253);;
 		}
 
 	
@@ -124,9 +174,9 @@ body{
 
 						
 			#foto {
-				margin-right: 2em;
+				margin-right: 1em;
 				width: 100%;
-				height: 35rem;
+				height: 34rem;
 				display: flex;
 				flex-wrap: wrap;
 			}
@@ -135,70 +185,35 @@ body{
 				width: 25rem;
 				height: 25rem;
 				border-radius: 50%;
-				box-shadow: 1px 1px 12rem rgb(0, 0, 0);
+				box-shadow: 1px 1px 4rem rgb(0, 0, 0);
 				margin-left: 20%;
 				margin: auto;
-				transition: all 350ms;
+				transition: all 500ms;
 			}
 
 			#foto img:hover{
 				width: 30rem;
 				height: 30rem;
 				border-radius: 50%;
-				box-shadow: 1px 1px 8rem rgb(2, 119, 103);
+				box-shadow: 1px 1px 6rem rgb(2, 119, 103);
 				margin-left: 20%;
 				margin: auto;
+				cursor: none;
+				transition: all 500ms;
 			}
 
 			
-
-			/* Texto */
-
-			.descripcion {
-				background: gray;
-				border-radius: 10%;
-				box-shadow: 1px 1px 2rem rgb(43, 8, 8);
-				width: 100%;
-				height: auto;
-				padding: 1rem;
-				transition: all 1000ms;
-				font-size: 0px;
-				color: gray;
-			} 
-
-			.descripcion:hover {
-				background: white;
-				box-shadow: 1px 1px 2rem rgb(2, 119, 103);
-				width: inherit;
-				height: auto;
-				padding: 1rem;
-				font-size: 25px;
-				color: black;
-				text-align: justify;
-			} 
-
-			#iconos {
-				width: 100%;
-				display: flex table;
-				flex-wrap: wrap;
-				
+			.conten{
+				margin-top: 1.8rem;
 			}
 			
-			#iconos img{
-				margin-left: 6rem;
-				display: flex table;
-				padding: 4px;
-				width: 3rem;
-				height: 4rem;
-				transition: all 350ms;
-
+			.conten {
+				background: radial-gradient(
+					rgb(200, 219, 219) 30%,
+					white 70%
+				);
 			}
-
-			#iconos img:hover{
-				cursor: pointer;
-				width: 4rem;
-
-			}
+			
 
 		
 

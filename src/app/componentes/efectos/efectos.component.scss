@@ -58,3 +58,76 @@
 .card div{
   margin-bottom: 20px;
 }
+
+ // Porcentage forma resumida
+
+    @function progress($percent){
+      $deg: $percent/100 * 180;
+      @return #{$deg}deg;
+    }
+
+    @mixin circular-progress($percent,$name,$color,$bgcolor) {
+      $progress: progress($percent);
+
+      &,
+      &:before,
+      &:after{
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+      }
+
+      margin: auto;
+      position: relative;
+      transform: rotate($progress);
+      background: linear-gradient(
+        0deg,
+        $color 50%,
+        rgba($color,.2) 50%
+      );
+
+      &:before,
+      &:after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+      }
+      &:before{
+        content: "#{$percent}%";
+        background: $bgcolor content-box;
+        transform: rotate(-#{$progress});
+        padding: .5em;
+        box-sizing: border-box;
+        font-size: 1.5rem;
+        line-height: 4rem;
+      }
+      &:after{
+        content: "";
+        transform: scale(1.1) rotate(-#{$progress});
+        line-height: 14rem;
+        background: linear-gradient(
+          transparent 50%,
+          $bgcolor 50%
+        );
+      }
+    }
+
+    .porcentage {
+      width: 30%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 2em;
+      margin-block-end: 2rem;
+    }
+
+
+
+    .html {
+      @include circular-progress(
+        25,
+        HTML5,
+        rgb(255, 102, 0),
+        white
+        );
+    }

@@ -1,0 +1,69 @@
+
+
+#aptitudes,
+#idiomas,
+#pasatiempos,
+#personal {
+    box-shadow: 1px 1px 10px rgb(134, 131, 131);
+    padding: 2rem;
+    transition: all 500ms;
+    margin: 1rem;
+}
+
+#aptitudes:hover,
+#idiomas:hover,
+#pasatiempos:hover,
+#personal:hover {
+    box-shadow: 1px 1px 5px rgb(25, 109, 109);
+    border-radius: 5%;
+    margin: 1.2rem;
+}
+
+#aptitudes h3,
+#idiomas h3,
+#pasatiempos h3,
+#personal h3 {
+    text-align: center;
+    text-shadow: 1px 1px 30px rgb(255, 0, 0);
+    text-transform: uppercase;
+}
+
+#idiomas img,
+#pasatiempos img,
+#personal img {
+    width: 1rem;
+}
+
+#idiomas li,
+#pasatiempos li,
+#personal li {
+    margin-top: 0.5rem;
+
+}
+
+
+    /* Aptitudes */
+    
+    #aptitudes h4 {
+        padding-left: 2rem;
+    }
+
+    #aptitudes img{
+        width: 3rem;
+        height: 5.2rem;
+    }
+
+    #aptitudes li{
+        margin-top: 1rem;
+        display: flex;
+    }
+
+    /* Idiomas */
+
+
+    /* Pasatiempos */
+
+    
+
+
+

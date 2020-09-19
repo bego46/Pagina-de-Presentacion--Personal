@@ -1,21 +1,72 @@
 
 <!-- Titulo -->
-<div class="caja">
+
+<div class="separador">
+	<div class="set-m">
+		<a	[routerLink]="['/inicio']"
+			[routerLinkActive]="['actived']">
+			<h2>
+				{{title}}
+			</h2>
+		</a>
+	</div>
+</div>
 	
-	<div class="separador">
-		<div class="set-m">
-			<a	[routerLink]="['/inicio']"
-				[routerLinkActive]="['actived']">
-				<h2>
-					{{title}}
-				</h2>	
-			</a>
-		</div>
+
+<!-- Encabezado -->
+
+<div id="encabezado">
+
+
+	<!-- Foto -->
+
+	<div id="foto">
+		<img src="assets/img/foto.jpg" />
 	</div>
 
+	<!-- Descripcion y redes sociales -->
+
+	<div class="descripcion">
+
+		<!-- Redes Sociales -->
+		<div id="iconos">
+
+			<a	target="_blank"
+				href="https://www.facebook.com/dberlad/"
+				title="Facebook">
+				<img src="assets/img/logos/facebook.svg" />
+			</a>
+
+			<a	target="_blank"
+				href="https://www.instagram.com/berlad66/?hl=es-la"
+				title="Instagram">
+				<img src="assets/img/logos/instagram.svg" />
+			</a>
+
+			<a	target="_blank"
+				href="https://github.com/bego46"
+				title="Github">
+				<img src="assets/img/logos/github.svg" />
+			</a>
+
+			<a	target="_blank"
+				href="https://www.linkedin.com/in/berladGonzalez"
+				title="LinkedIn">
+				<img src="assets/img/logos/linkedin.svg" />
+			</a>
+
+		</div>
+	
+		<p>
+			Me considero una persona xtremadamente motivada y preparada para desarrollar constantemente mis habilidades y crecer profesionalmente. Confío en mi capacidad de adaptación en el laboral.
+		</p>
+
+		<h5>Desarrollador Web</h5>
+
+	</div>
+	
 </div>
 
-	
 
 
 <!-- Contenido -->
@@ -27,7 +78,7 @@
 		<!-- separacion -->
 		<div class="separador">
 			<div class="set-m">
-				<a	[routerLink]="['/sobre-mi']"
+				<a	[routerLink]="['/inicio']"
 					[routerLinkActive]="['actived']">
 					<h3>
 						{{ separador._2 }}
@@ -37,20 +88,61 @@
 		</div>
 
 			
-			<div>
-				<ul>
-						<li><a>Nombre : {{ datos.nombre }}</a></li>
-						<li><a>Edad : {{ datos.edad }}</a></li>
-						<li>Pasatiempos :</li>
-						<ol>
-							<li>Escuchar Musica</li>
-							<li>Leer libros y manga</li>
-							<li>Ver Anime, series y peliculas</li>
-						</ol>
+		<div class="conten">
+			
+			<div id="aptitudes" >
+				<h3>Aptitudes: </h3>
 
-					
+				<ul *ngFor="let i of aptitudes">
+					<li>
+						<img [src]="imagen" />
+
+						<span>
+							<h4> {{ i.title }} </h4>
+							{{ i.data }}
+						</span>
+					</li>
 				</ul>
+				
 			</div>
+			
+			<ul id="idiomas">
+				<h3>Idiomas</h3>
+
+				<ul *ngFor="let i of idiomas">
+					<li>
+						<img [src]="imagen" />
+						{{ i.data }}
+					</li>
+				</ul>
+
+			</ul>
+
+			<ul id="pasatiempos">
+
+				<h3>Pasatiempos</h3>
+
+				<ul *ngFor="let i of pasatiempos">
+					<li>
+						<img [src]="imagen" />
+						{{ i.data }}
+					</li>
+				</ul>
+			</ul>
+
+			<ul id="personal">
+				<h3>Informacion personal</h3>
+
+				<ul *ngFor="let i of data">
+					<li>
+						<img [src]="imagen" />
+						{{ i.title }} :	 {{ i.data }}
+					</li>
+				</ul>
+
+			</ul>
+
+		</div>
 			
 
 

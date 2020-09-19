@@ -1,60 +1,61 @@
-	/* Logos */
 
-  .logos,
-  .logo {
-    width: 100%;
-    height: auto;
-  }
 
-  .logos img{
-    width: 10rem;
-  }
+.logo {
+  box-shadow: 1px 1px 10px rgb(134, 131, 131);
+  padding: 1rem;
+  transition: all 500ms;
+  margin: 1rem;
+}
 
-  .logo {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .dataTex,
-  .dataTex img,
-  .dataTex div{
-    display: flex;
-    flex-wrap: wrap;
-  }
 
-  .dataTex{
-    margin-top: 2rem;
-    width: 60%;
-    font-size: 0px;
-    transition: all 300ms;
-  }
+.logo:hover {
+  box-shadow: 1px 1px 5px rgb(25, 109, 109);
+  border-radius: 5%;
+  margin: 1.2rem;
+}
 
-  .dataTex img{
-    width: 12rem;
-    height: 12rem;
-  }
-  
-  
-  .dataTex div{
-    padding: 1rem;
-    width: 50%;
-    transition: all 300ms;    
-  }
+.logo h4 {
+  text-align: center;
+  text-shadow: 1px 1px 30px rgb(255, 0, 0);
+  text-transform: uppercase;
+}
 
-  .dataTex:hover{
-    width: 55%;
-    padding: 2rem;
-    margin-left: 2rem;
-    margin-top: 2rem;
-    box-shadow: 1px 2px 5rem aqua;
-    font-size: 20px;
-    text-align: justify;
-    background-image: radial-gradient(
-      white 5%,
-      aqua 40%
-      );
-    
-  }
+.logo ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo ul li {
+  width: 70%;
+}
+
+.logo img {
+  width: 5rem;
+  margin-bottom: auto;
+}
+
+.logo img,
+.logo ul li {
+  margin-right: 0.5rem;
+}
+
+.logo ul li {
+  margin-top: 1rem;
+}
+
+.logo a {
+  color: black;
+}
+
+
+
+.conten{
+  margin-top: 1.8rem;
+}
+
+.conten {
+  background: white;
+}
   
   
   
@@ -67,15 +68,15 @@
   
   @mixin circular-progress($percent,$name,$color,$bgcolor) {
     $progress: progress($percent);
-  
+
     &,
     &:before,
     &:after{
-      width: 12rem;
-      height: 12rem;
+      width: 7rem;
+      height: 7rem;
       border-radius: 50%;
     }
-  
+
     margin: auto;
     position: relative;
     transform: rotate($progress);
@@ -84,7 +85,7 @@
       $color 50%,
       rgba($color,.2) 50%
     );
-  
+
     &:before,
     &:after{
       position: absolute;
@@ -93,16 +94,16 @@
       text-align: center;
     }
     &:before{
-      content: "#{$name}";
+      content: "#{$percent}%";
       background: $bgcolor content-box;
       transform: rotate(-#{$progress});
       padding: .5em;
       box-sizing: border-box;
-      font-size: 1.9rem;
-      line-height: 8rem;
+      font-size: 1.5rem;
+      line-height: 4rem;
     }
     &:after{
-      content: "#{$percent}%";
+      content: "";
       transform: scale(1.1) rotate(-#{$progress});
       line-height: 14rem;
       background: linear-gradient(

@@ -1,22 +1,73 @@
 
 
 <!-- Titulo -->
-<div class="caja">
 
-	<div class="separador">
-		<div class="set-m">
-			<a	[routerLink]="['/inicio']"
-				[routerLinkActive]="['actived']">
-				<h2>
-					{{title}}
-				</h2>	
+<div class="separador">
+	<div class="set-m">
+		<a	[routerLink]="['/inicio']"
+			[routerLinkActive]="['actived']">
+			<h2>
+				{{title}}
+			</h2>
+		</a>
+	</div>
+</div>
+	
+
+<!-- Encabezado -->
+
+<div id="encabezado">
+
+
+	<!-- Foto -->
+
+	<div id="foto">
+		<img src="assets/img/foto.jpg" />
+	</div>
+
+	<!-- Descripcion y redes sociales -->
+
+	<div class="descripcion">
+
+		<!-- Redes Sociales -->
+		<div id="iconos">
+
+			<a	target="_blank"
+				href="https://www.facebook.com/dberlad/"
+				title="Facebook">
+				<img src="assets/img/logos/facebook.svg" />
 			</a>
+
+			<a	target="_blank"
+				href="https://www.instagram.com/berlad66/?hl=es-la"
+				title="Instagram">
+				<img src="assets/img/logos/instagram.svg" />
+			</a>
+
+			<a	target="_blank"
+				href="https://github.com/bego46"
+				title="Github">
+				<img src="assets/img/logos/github.svg" />
+			</a>
+
+			<a	target="_blank"
+				href="https://www.linkedin.com/in/berladGonzalez"
+				title="LinkedIn">
+				<img src="assets/img/logos/linkedin.svg" />
+			</a>
+
 		</div>
+	
+		<p>
+			Me considero una persona xtremadamente motivada y preparada para desarrollar constantemente mis habilidades y crecer profesionalmente. Confío en mi capacidad de adaptación en el laboral.
+		</p>
+
+		<h5>Desarrollador Web</h5>
+
 	</div>
 	
 </div>
 
-	
 
 <!-- Contenido -->
 
@@ -63,7 +114,7 @@
 		<!-- separacion -->
 		<div class="separador">
 			<div class="set-m">
-				<a	[routerLink]="['/acerca-de']"
+				<a	[routerLink]="['/inicio']"
 					[routerLinkActive]="['actived']">
 					<h3>
 						{{ separador._4 }}
@@ -72,80 +123,55 @@
 			</div>
 		</div>
 
-		
-		<div id="com">
-
-			<p>Puede comunicarce conmigo de las siguientes formas :</p>
-			<ul >
-
-				<li *ngFor="let i of contenido">
-					- {{ i.tipo }} : 
-					<a	[href]="i.href"
-						[title]="i.titulo"
-						target="_blank"
-						class="rutas">
-						{{ i.name }} / {{ i.data }}
-					</a>
-				</li>
-				
-			</ul>
-
-		</div>
-		
-
-		<div id="use">
-			<h4>Elementos externos usados</h4>
+		<div class="conten">
 			
-			<div>
-				Iconos diseñados por 
-				<a	[style.color]="separador._2 != 0 ? 'black' : 'whith'" 
-					href="https://www.flaticon.es/autores/pixel-perfect" 
-					title="Pixel perfect"
-					target="_blank">
-					Pixel perfect
-				</a>
-				from 
-				<a	[style.color]="separador._2 != 0 ? 'black' : 'whith'"
-					href="https://www.flaticon.es/" 
-					title="Flaticon"
-					target="_blank">
-					www.flaticon.es
-				</a>
+			<div id="com">
+	
+				<h4>Medios de Comunicacion</h4>
+				<ul >
+	
+					<li *ngFor="let i of contenido">
+						<img [src]="imagen" />
+						{{ i.tipo }} : 
+						<a	[href]="i.href"
+							[title]="i.titulo"
+							target="_blank"
+							class="rutas">
+							{{ i.name }} / {{ i.data }}
+						</a>
+					</li>
+					
+				</ul>
+	
+			</div>
+			
+	
+			<div id="use">
+				
+				<h4>Elementos externos usados</h4>
+				
+				<ul *ngFor="let i of data">
+					<li>
+						<img [src]="imagen" />
+						Iconos diseñados por 
+						<a	[style.color]="separador._2 != 0 ? 'black' : 'whith'" 
+							[href]="i.href1" 
+							[title]="i.name1"
+							target="_blank">
+							{{ i.name1 }}
+						</a>
+						from 
+						<a	[style.color]="separador._2 != 0 ? 'black' : 'whith'" 
+							[href]="i.href2" 
+							[title]="i.name2"
+							target="_blank">
+							{{ i.name2 }}
+						</a>
+					</li>
+				</ul>
+
 			</div>
 
-			<div>
-				Iconos diseñados por 
-				<a	[style.color]="separador._2 != 0 ? 'black' : 'whith'" 
-					href="https://www.flaticon.es/autores/freepik" 
-					title="Freepik"
-					target="_blank">
-					Freepik
-				</a>
-				from 
-				<a	[style.color]="separador._2 != 0 ? 'black' : 'whith'"
-					href="https://www.flaticon.es/" 
-					title="Flaticon"
-					target="_blank">
-					www.flaticon.es
-				</a>
-			</div>
-
-			<div>
-				Iconos diseñados por
-				<a	[style.color]="separador._2 != 0 ? 'black' : 'whith'"
-					target="_blank"
-					href="https://www.flaticon.es/autores/kiranshastry" 
-					title="Kiranshastry">
-					Kiranshastry
-				</a> 
-				from 
-				<a	[style.color]="separador._2 != 0 ? 'black' : 'whith'"
-					target="_blank"
-					href="https://www.flaticon.es/" 
-					title="Flaticon">
-					www.flaticon.es
-				</a>
-			</div>
 		</div>
 		
 	</div>

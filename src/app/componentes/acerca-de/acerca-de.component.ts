@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AcercaDeComponent implements OnInit {
 
-  public title : string;
+  public title = "Berlad Gonzalez Valenzuela";
   public separador : any;
   public contenido : any;
-
+  public data : any;
+  public imagen =  "assets/img/icon/ios-arrow-forward.svg";
 
   constructor() {
-    this.title = 'Berlad Gonzalez Valenzuela';
 
     this.separador = {
       _1: 'Descripcion',
@@ -34,9 +34,30 @@ export class AcercaDeComponent implements OnInit {
         data: "311-736-9170"
       },
       {
-        name: "Celular",
-        tipo: "movil",
+        tipo: "Celular",
+        name: "Movil",
         data: ""
+      }
+    ]
+
+    this.data = [
+      {
+        href1: "https://www.flaticon.es/autores/pixel-perfect",
+        name1: "Pixel perfect",
+        href2: "https://www.flaticon.es/",
+        name2: "Flaticon"
+      },
+      {
+        href1: "https://www.flaticon.es/autores/freepik",
+        name1: "Freepik",
+        href2: "https://www.flaticon.es/",
+        name2: "Flaticon"
+      },
+      {
+        href1: "https://www.flaticon.es/autores/kiranshastry",
+        name1: "Kiranshastry",
+        href2: "https://www.flaticon.es/",
+        name2: "Flaticon"
       }
     ]
 

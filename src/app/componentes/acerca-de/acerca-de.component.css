@@ -1,0 +1,39 @@
+
+
+#use,
+#com { 
+    margin-top: 2rem;
+}
+
+#use,
+#com {
+    box-shadow: 1px 1px 10px rgb(134, 131, 131);
+    padding: 2rem;
+    transition: all 500ms;
+    margin: 1rem;
+}
+
+#use:hover,
+#com:hover {
+    box-shadow: 1px 1px 5px rgb(25, 109, 109);
+    border-radius: 5%;
+    margin: 1.5rem;
+}
+
+#use img,
+#com img{
+    width: 1rem;
+}
+
+#use h4,
+#com h4 {
+    text-align: center;
+    text-shadow: 1px 1px 30px rgb(255, 0, 0);
+    text-transform: uppercase;
+}
+
+#use ul,
+#com ul {
+    margin-top: 0.5rem;
+
+}
